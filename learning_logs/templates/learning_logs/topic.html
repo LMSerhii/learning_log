@@ -2,12 +2,12 @@
 {% block title %}{{ title }}{% endblock title %}
 
 {% block content %}
-    <h1>Topic: {{ topic }}</h1>
-    <h3>Entries: </h3>
+    <h1>Тема: {{ topic }}</h1>
+    <h3>Дописи: </h3>
     <ul>
       {% for entry in entries %}
         <li>
-          <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+          <p>{{ entry.date_added|date:'d M, Y H:i' }}</p>
           <p>{{ entry.text|linebreaks }}</p>
         </li>
       {% empty %}
